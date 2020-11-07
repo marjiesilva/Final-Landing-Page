@@ -1,0 +1,102 @@
+<!--
+
+ Author: Marjorie Silva
+
+ Class:  Software Engineering
+
+ Project: Lab 2 / Regular Expression
+
+ Description: This is the first version of my Regular Expression and is being submitted as part of Lab 2.
+
+-->
+
+<!--HTML, CSS, JAVASCRIPT in one file-->
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Marjie's Regular Expression</title>
+<meta charset="utf-8">
+<style>
+body {
+  background: #757272;
+  font-family:Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align:center;
+    font-weight:800;
+    font-size:1.5em;
+    margin-bottom:1em;
+    margin-top: 5em;
+    color:#010f14;
+}
+h2{
+    text-align:center;
+    font-weight:800;
+    font-size:1em;
+    margin-bottom:1em;
+    margin-top: 1em;
+    color:#010b0f;
+}
+form{
+    text-align: center;
+    height: 28px;
+    size: 20px;
+}
+.Button{
+    font-size: 25px;
+    cursor: pointer;
+}
+.button:hover{
+    background: rgb(10, 13, 218);
+}
+.button:focus{
+    background-color: rgb(12, 1, 1);
+}
+</style>
+</head>
+<body>  
+
+<h1>Marjie's Regular Expression Test</h1>
+<hr>
+<hr>
+
+<h2>Begin by inputting the string you want to test followed by the Regular Expression
+    you are testing against. Lastly, hit the Check button for results.
+</h2>
+<hr>
+<hr>
+<!--create form for input values -->
+<form>
+    <label for="userString">Enter String:</label><br>
+    <input type="text" id="userString" name="userString"><br><br><br><br>
+
+    <label for="userRegex">Enter Regular Expression: </label><br>
+    <input type="text" id="userRegex" name="userRegex"><br><br><br><br>
+    <!--checkValid -->
+    <button type="button" class="button" onclick= "checkValid(userString, userRegex)">Check</button><br><br><br><br>
+    <!--result-->
+    <label>Results:</label><br>
+    <input id="result" type="text" value="" size="36" disabled >
+    
+
+</form>
+<!--checkVaild function to test against the two inputs-->
+<script>
+    function checkValid(){
+        inputString = document.getElementById("userString").value;
+        inputRegex = document.getElementById("userRegex").value;
+
+        regexVal = RegExp(inputRegex);
+
+        if (inputString === ''){
+            document.getElementById("result").value = "Error, Please Enter a String:"
+        }else if (inputRegex === ''){
+            document.getElementById("result").value = "Error, Please Enter a Regular Expression:"
+        }else if (inputRegex===''){
+        }else{
+            document.getElementById("result").value = regexVal.test(inputString);
+        }
+    }
+</script>
+</body>
+</html>

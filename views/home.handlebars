@@ -1,0 +1,351 @@
+<!--
+
+ Author: Marjorie Silva
+
+ Class:  Software Engineering
+
+ Project: Landing Page
+
+
+-->
+
+
+
+<!--Dr. Pogue gave permission to use templates from W3C schools so I used this template 
+    from them and I edited it to fill my needs and requirements for this project! I learned 
+    a lot by doing this. It gave me the opportunity to research things I didnt know and how they    
+    are used. -->
+<!DOCTYPE html>
+<html lang="en">
+<title>Marjie's Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--Used one file for HTML and CSS-->
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+img {
+    width: 100%;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: teal;
+  color: rgb(230, 27, 213);
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover {
+  background-color: rgb(219, 223, 9);
+}
+</style>
+<body>
+
+<!-- Navbar: this was included in the template, having trouble to get it to work, if time permits edit, change, and fix -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-theme-l1"><img src="/img/coding-logo.jpg"style="width:45px;height:45px;"></a>
+<!---        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Values</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">News</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a>
+-->
+    </div>
+</div>
+
+<!-- Sidebar: for each sprint. Include links to take user to that part of the page -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Menu</b></h4>
+    <a class="w3-bar-item w3-button w3-hover-black" href="https://github.com/marjiesilva/Software-Eng-ms.git" target="_blank">GitHub</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint1">Sprint 1</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint2">Sprint 2</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint3">Sprint 3</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint4">Sprint 4</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint5">Sprint 5</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint6">Sprint 6</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint7">Sprint 7</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="#Sprint8">Sprint 8</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="https://albert-final-project.azurewebsites.net/" target="_blank">ALBERT Final Project</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="https://github.com/GeorgeWPappas/Albert-Final-Project" target="_blank">ALBERT GitHub Final Project</a>
+
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Marjie's Landing Page</h1>
+            <p>Welcome! I am currently a student attending Lewis Univeristy studying Computer Science. This Landing Page is specifically 
+                dedicated to a class I am taking this Fall called Software Engineering (CPSC-44000). We are working in Scrum teams with 
+                about 5 other members on the team. We follow a 2-week Sprint lifecycle with a total of 8 Sprints. Throughout our Sprints 
+                we plan, deliver, and review our projects. Below, I have provided some details and links to my projects.
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Knowledge is Power"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"Do the things you Love"</p>
+        </div>
+    </div>
+<!--beginning of sprint one-->
+    <a name="Sprint1"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 1</h1>
+            <p>Throughout Sprint 1, we learned about different kinds of Software Development lifecycles. We were able to distinguish, compare and contrast
+                these lifecycles and explain why Agile developement is the most popular in use today. Also, we discussed SaaS applications, cloud computing,
+                SOA, three-tier and MVC designs. Lastly, We also set up the environments we will be using in this class and wrote our first programs. 
+                <br>
+                <br>
+            <a href="/myfavoritehobby" target="_blank">My Favorite Hobby HTML Page</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Believe In Yourself"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"Practice Makes Perfect"</p>
+        </div>
+    </div>
+<!--beginning of sprint two-->
+    <a name="Sprint2"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 2</h1>
+            <p>In this Sprint, we got more into detail with creating HTML, CSS, Javascript, JSON and Node.js code. We did research, read about 
+                and discussed Ruby programs as well as wrote and interpretted regualr explressions. This Sprint consisted in working closer 
+                with our Sprint team for discussions and asighnments. Azure and Github played a big part in creating this Landing Page 
+                with our project links. 
+                <br>
+                <br>
+                <a href="/diceroll" target="_blank">Marjie's Dice Roller Game</a> 
+                <br>
+                <br>
+                <a href="/syllabus" target="_blank">Course Syllabus</a> 
+                <br>
+                <br>
+                <a href="/regexp" target="_blank">RegExp Tester</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Dream Big"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"Focus On Goals"</p>
+        </div>
+    </div>
+<!--beginning of sprint three-->
+    <a name="Sprint3"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 3</h1>
+            <p>Discuss Sprint 3 Here
+                <br>
+                <br>
+                <!--update file-->
+            <a href="/helloworld" target="_blank">Insert Sprint 3 Programs Here</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"The Secret To Getting Ahead Is Getting Started"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"There Are No Shortcuts To Any Place Worth Going"</p>
+        </div>
+    </div>
+<!--beginning of sprint four-->
+    <a name="Sprint4"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 4</h1>
+            <p>Discuss Sprint 4 Here 
+                <br>
+                <br>
+                <!--update file-->
+            <a href="file:///Users/Marjie/my-favorite-hobby-ms/my-favorite-hobby.html" target="_blank">Insert Sprint 4 Programs Here</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"There Is No Substitute For Hardwork"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"Push Yourself, No One Else Is Going To Do It For You"</p>
+        </div>
+    </div>
+<!--beginning of sprint five-->
+    <a name="Sprint5"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 5</h1>
+            <p>Discuss Sprint 5 Here
+                <br>
+                <br>
+                <!--update file-->
+            <a href="file:///Users/Marjie/my-favorite-hobby-ms/my-favorite-hobby.html" target="_blank">Insert Sprint 5 Programs Here</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Whatever You Are, Be A Good One"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"Hold The Vision, Trust The Process"</p>
+        </div>
+    </div>
+<!--beginning of sprint six-->
+    <a name="Sprint6"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 6</h1>
+            <p>Discuss Sprint 6 Here 
+                <br>
+                <br>
+                <!--update file-->
+            <a href="file:///Users/Marjie/my-favorite-hobby-ms/my-favorite-hobby.html" target="_blank">Insert Sprint 6 Programs Here </a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Don’t limit your challenges. Challenge your limits"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"No one is to blame for your future situation but yourself. If you want to be successful, then become “Successful.”"</p>
+        </div>
+    </div>
+<!--beginning of sprint seven-->
+    <a name="Sprint7"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 7</h1>
+            <p>Discuss Sprint 7 Here
+                <br>
+                <br>
+                <!--update file-->
+            <a href="file:///Users/Marjie/my-favorite-hobby-ms/my-favorite-hobby.html" target="_blank">Insert Sprint 7 Programs Here/a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Let Your Success Make The Noise"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"The Hard Days Are What Makes You Stronger"</p>
+        </div>
+    </div>
+<!--beginning of sprint 8-->
+    <a name="Sprint8"></a>
+    <div class="w3-row w3-padding-32">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Sprint 8</h1>
+            <p>Discuss Sprint 8 Here
+                <br>
+                <br>
+<!--update file-->
+            <a href="file:///Users/Marjie/my-favorite-hobby-ms/my-favorite-hobby.html" target="_blank">Insert Sprint 8 Programs Here</a> 
+            </p>
+        </div>
+        <div class="w3-third w3-container">
+            <p class="w3-border w3-padding-large w3-padding-32 w3-center">"Prove To Yourslef You Can Do It, Be the Leader"</p>
+            <p class="w3-border w3-padding-large w3-padding-64 w3-center">"If Opportunity Doesn't Knock, Build A Door"</p>
+        </div>
+    </div>
+
+    <!-- Pagination 
+    <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+            <a class="w3-button w3-black" href="#">1</a>
+            <a class="w3-button w3-hover-black" href="#">2</a>
+            <a class="w3-button w3-hover-black" href="#">3</a>
+            <a class="w3-button w3-hover-black" href="#">4</a>
+            <a class="w3-button w3-hover-black" href="#">5</a>
+            <a class="w3-button w3-hover-black" href="#">»</a>
+        </div>
+    </div>
+
+    <footer id="myFooter">
+        <div class="w3-container w3-theme-l2 w3-padding-32">
+            <h4>Footer</h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </div>
+    </footer>
+
+    END MAIN -->
+</div>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>Landing Page</title>
+</head>
+<body>
+    This will display the contents of my Landing Page
+</body>
+</html>
+-->

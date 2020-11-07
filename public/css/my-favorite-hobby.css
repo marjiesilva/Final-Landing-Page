@@ -1,0 +1,97 @@
+
+body {
+  background-color: LavenderBlush;
+}
+
+h1 {
+  font-size:50px;
+  color: DeepPink;
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align:center;
+  text-transform: uppercase;
+}
+h2 {
+  font-size:30px;
+  color: Coral;
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align:center;
+  text-transform: uppercase;
+}
+h3 {
+  font-size:18px;
+  color: Green;
+  margin-left: 20px;
+  text-align:center;
+  text-transform: uppercase;
+}
+p {
+  text-indent: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  text-align: justify;
+  text-align:center;
+  letter-spacing: 3px;
+}
+* {
+  box-sizing: border-box;
+  margin-bottom: 20px;  
+}
+.img-container {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+#schedule {
+ transition: width 2s, height 2s, transform 2s;
+}
+
+#schedule:hover {
+  transform: rotate(360deg);
+}
+#schedule {
+  font-family: Ariel;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#schedule td, #schedule th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+#schedule tr:nth-child(even){
+  background-color: LightCyan;
+}
+#schedule tr:nth-child(odd){
+  background-color: LightBlue;
+}
+
+#schedule tr:hover {
+  Background-color: Orange;
+}
+#schedule th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: SteelBlue;
+  color: White;
+}
+ul, li{
+  margin-right: 0px;
+  padding-right: 15px;  
+}
+
+.column{
+   float: left;
+   margin-left: 250px;
+   margin-bottom: 100px;
+}

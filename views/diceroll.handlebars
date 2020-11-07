@@ -1,0 +1,177 @@
+<!--
+
+ Author: Marjorie Silva
+
+ Class:  Software Engineering
+
+ Project: Lab 2 / Dice Roller Game
+
+ Description: This is the first version of my Dice Roller Game and is being submitted as part of Lab 2.
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Marjie's Dice Roller Game</title>
+<meta charset="UTF-8">
+<!--CSS for my paragraphs, heading, buttons, body, and dice.-->
+<style>
+p {
+  margin:0;
+}
+body {
+  background: #13d333;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.heading {
+  text-align:center;
+  font-weight:800;
+  font-size:1.5em;
+  margin-bottom:1em;
+  margin-top: 5em;
+  color:#edf2f4;
+}
+.wrapper {
+  max-width: 600px;
+  margin:10% auto;  
+}
+.row {
+  display:flex;
+  justify-content:center;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.win-text {
+  text-align:center;
+  font-weight:800;
+  font-size:1.5em;
+  margin-bottom:1em;
+  color:#edf2f4;
+}
+.dice {
+  width:120px;
+  height:120px;
+  background:#420adb;
+  display:inline-block;
+  color:#e0fbfc;
+  font-size:30px;
+  text-align:center;
+  border-radius:10px;
+  margin:0 0.2em;
+}
+.dice h1 {
+  margin-bottom:0;
+  font-size:50px;
+  font-weight: 800;
+}
+.button {
+  text-align:center; 
+}
+button {
+  border:0;
+  border-color:0;
+  padding:0.6em 0.8em;
+  background:#dbf303;
+  margin:2em 0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:1em;
+  text-transform:uppercase;
+  font-weight:800;
+  color:#edf2f4;
+  border-radius:3px;
+}
+button:hover {
+  background:#ef233c;
+  cursor:pointer;
+}
+.link {
+  text-align:center;
+}
+#diceNumOne, #bulletNumberTwo {
+  color: #ee4d0e;
+}
+</style>
+</head>
+<body onload="rollDice()">                             <!--onload allows the dice to roll when page is loaded-->
+        <div class="heading">                                 <!--introduction to project and how to play-->
+          <p>Welcome to Marjie's Dice Roller Game! 
+              <br>
+              <br>
+            Simply Press "Ready Go!" To Play.
+            <br>
+            <br>
+            Enjoy!
+          </p>
+        </div>
+      <div class="win-text">
+      <p></p>
+        </div>
+    <div class="wrapper" >
+    </div>
+        <!--<div class="win-text">
+          <p>Welcome to Marjie's Dice Roller Game! 
+              <br>
+              <br>
+             Simply Press "Ready Go!" To Play.
+             <br>
+             <br>
+             Enjoy!
+          </p>
+        </div>-->
+        
+        <div class="row">             <!-- my two dice will be next to each other in one row with-->
+        <div class="dice diceOne">    <!--a div class for dice one and another for dice two-->
+          <h1>1</h1>
+          <p id="diceNumOne" class="diceNum1"></p>
+        </div>
+      
+        <div class="dice diceTwo">
+          <h1>1</h1>
+          <p id="diceNumTwo" class="diceNum1"></p>
+        </div>
+        </div>
+        
+        <div class="button">
+          <button type ="button" onclick="rollDice()" autofocus>Ready Go!</button>
+        </div>
+      
+        <!--my javascript function for the dice below.
+            using Math.random to generate random number
+            up to 6. If else statements to print out the 
+            winner or if it was a tie.   -->
+<script>                
+    function rollDice (){
+var diceOne = Math.floor(Math.random()*6)+1;
+var diceTwo = Math.floor(Math.random()*6)+1;
+  
+document.getElementById("diceNumOne").removeAttribute("class");
+document.getElementById("diceNumOne").classList.add("diceNum"+diceOne);
+document.getElementById("diceNumTwo").removeAttribute("class");  
+document.getElementById("diceNumTwo").classList.add("diceNum"+diceTwo);
+
+console.log (diceOne);
+console.log (diceTwo);
+
+if (diceOne === diceTwo) {
+  document.querySelector(".win-text p").innerHTML="It's a tie!";
+  document.querySelector(".diceOne h1").innerHTML=diceOne;
+  document.querySelector(".diceTwo h1").innerHTML=diceTwo;
+} else if (diceOne > diceTwo) {
+  document.querySelector(".win-text p").innerHTML="First dice wins!";
+    document.querySelector(".diceOne h1").innerHTML=diceOne;
+  document.querySelector(".diceTwo h1").innerHTML=diceTwo;
+}
+else {
+  document.querySelector(".win-text p").innerHTML="Second dice wins!";
+    document.querySelector(".diceOne h1").innerHTML=diceOne;
+  document.querySelector(".diceTwo h1").innerHTML=diceTwo;
+}
+}
+</script>
+
+</body>
+</html> 
+
